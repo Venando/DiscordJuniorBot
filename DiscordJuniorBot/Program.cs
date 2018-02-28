@@ -17,7 +17,6 @@ namespace DiscordJuniorBot {
             client = new DiscordSocketClient();
             client.Log += Log;
             client.MessageReceived += MessageReceived;
-            String token = ReadToken();
             await client.LoginAsync(TokenType.Bot, ReadToken());
             await client.StartAsync();
             await Task.Delay(-1);
